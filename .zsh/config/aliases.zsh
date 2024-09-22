@@ -12,8 +12,14 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias ls='ls --color=tty'
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -la'
+alias cat='batcat'
+
+alias fd='fdfind'
+
+alias ls='exa'
+alias l='exa'
+alias la='exa -a'
+alias ll='exa -la'
+
+alias tree='exa --tree'
 

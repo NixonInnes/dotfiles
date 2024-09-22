@@ -12,3 +12,5 @@ SAVEHIST=10000
 #export EDITOR=/usr/bin/nano
 #export VISUAL=/usr/bin/nano
 WORDCHARS=${WORDCHARS//\/[&.;]} 
+ 
+source /usr/share/doc/fzf/examples/completion.zsh
