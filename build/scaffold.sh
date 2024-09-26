@@ -53,7 +53,6 @@ create_link() {
 
 create_link "${HOME}/.zshrc" "${HOME}/.dotfiles/.zshrc"
 create_link "${HOME}/.zsh" "${HOME}/.dotfiles/.zsh"
-create_link "${HOME}/.local/bin" "${HOME}/.dotfiles/.local/bin"
 create_link "${HOME}/.config/nvim" "${HOME}/.dotfiles/.config/nvim"
 create_link "${HOME}/.config/alacritty" "${HOME}/.dotfiles/.config/alacritty"
 
