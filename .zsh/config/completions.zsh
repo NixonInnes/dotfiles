@@ -13,4 +13,4 @@ SAVEHIST=10000
 #export VISUAL=/usr/bin/nano
 WORDCHARS=${WORDCHARS//\/[&.;]} 
  
-source /usr/share/doc/fzf/examples/completion.zsh
+source $ZSH/config/completions/fzf.zsh

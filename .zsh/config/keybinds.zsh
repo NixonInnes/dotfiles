@@ -25,4 +25,4 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+source $ZSH/config/keybinds/fzf.zsh
