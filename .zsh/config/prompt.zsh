@@ -87,9 +87,7 @@ function parse_git_dirty() {
 block_git() {
   local line
   (( $+commands[git] )) || return
-  if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" = 1 ]]; then
-    return
-  fi
+
   local PL_BRANCH_CHAR
   PL_BRANCH_CHAR=$'\ue0a0'         # 
   local ref dirty mode repo_path
@@ -98,8 +96,8 @@ block_git() {
     repo_path=$(command git rev-parse --git-dir 2>/dev/null)
     dirty=$(parse_git_dirty)
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
-    ref="◈ $(command git describe --exact-match --tags HEAD 2> /dev/null)" || \
-    ref="➦ $(command git rev-parse --short HEAD 2> /dev/null)"
+      ref="◈ $(command git describe --exact-match --tags HEAD 2> /dev/null)" || \
+      ref="➦ $(command git rev-parse --short HEAD 2> /dev/null)"
 
     local ahead behind
     ahead=$(command git log --oneline @{upstream}.. 2>/dev/null)

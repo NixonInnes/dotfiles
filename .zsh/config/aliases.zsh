@@ -5,16 +5,16 @@
 source /etc/os-release
 
 # General Aliases
-alias cp="cp -i"                                                # Confirm before overwriting something
-alias df='df -h'                                                # Human-readable sizes
-alias free='free -m'                                            # Show sizes in MB
-alias gitu='git add . && git commit && git push'
-alias reload='. $HOME/.zshrc'
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-
+alias cp="cp -i" 
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias gitu='git add . && git commit && git push'
+alias ldock='lazydocker'
+alias lgit='lazygit'
+alias reload='. $HOME/.zshrc'
 
 # Distro Specific Aliases
 if [ "$ID" = "ubuntu" ]; then
@@ -29,5 +29,11 @@ if [ "$ID" = "ubuntu" ]; then
   alias tree='exa --tree'
 elif [ "$ID" = "manjaro" ]; then
   echo "Using Manjaro aliases"
+  alias cat='bat'
+  alias ls='eza'
+  alias l='eza'
+  alias la='eza -a'
+  alias ll='eza -la'
+  alias tree='eza --tree'
 fi
 

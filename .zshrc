@@ -94,7 +94,7 @@ fzfw() {
             fi
 
             # Display the subset of lines with batcat, highlighting the matched line
-            batcat --color=always --style=numbers,changes --line-range="$start":"$end" --highlight-line="$line" "$filename"
+            bat --color=always --style=numbers,changes --line-range="$start":"$end" --highlight-line="$line" "$filename"
         ')
 
   # Check if a selection was made
@@ -158,5 +158,11 @@ fzfd() {
   return 0
 }
 
+if [ -e "$HOME/.zshrc.local" ]; then
+  . "$HOME/.zshrc.local"
+fi
 
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
